@@ -9,7 +9,59 @@
     <script type="text/javascript" src="Bootstrap/js/jquery.js"></script>
     <script type="text/javascript" src="Bootstrap/js/bootstrap.js"></script>
     <style>
-        
+        #searchbox {
+            border: 2px solid gray;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px; 
+            border-radius: 8px;
+            width: 250%;
+            height: 35px;
+        }
+        input:focus::-webkit-input-placeholder {
+            color: transparent;
+        }
+        input:focus:-moz-placeholder {
+            color: transparent;
+        }
+        input:focus::-moz-placeholder {
+            color: transparent;
+        }
+        #searchbox input {
+            outline: none;
+        }
+        #searchbox input[type="text"] {
+            background: transparent;
+            padding: 5px 0px 5px 10px;
+            border-width: 0px;
+            font-family: "Arial Narrow", Arial, sans-serif;
+            font-size: 15px;
+            color: #828282;
+            width: 70%;
+            display: inline-table;
+            vertical-align: top;
+        }
+        #button-submit {
+            background: url(off.png);
+            float: left;
+            border-width: 0px;
+            cursor: pointer;
+            margin-left: 10px;
+            margin-top: 4px;
+            width: 21px;
+            height: 22px;
+        }
+        #button-submit:hover {
+            background: url(on.png); 
+            float: left;;
+        }
+        #button-submit:active {
+            background: url(on.png);
+            float: left;
+            outline: none;
+        }
+        #button-submit::-moz-focus-inner {
+            border: 0;
+        }
     </style>
 </head>
 <body>
@@ -20,14 +72,17 @@
                     username
                 </div>
                 <div class="col-xl-2" style="text-align: left;">
-                    <img src="logo.jpg" alt="logo" width="100px">
+                    <form id="searchbox" method="get" action="/search" autocomplete="off" style="background-color: white;">
+                        <input name="cari" type="text" size="18" placeholder="Mau cari apa?" />
+                        <input id="button-submit" type="submit" value="" />
+                    </form>
                 </div>
                 <div class="col-xl-2">
 
                 </div>
                 <div class="col-xl-4" style="text-align: right;">
-                    <a href="Dasboard.html"><button class="btn btn-danger"> home </button></a> 
-                    <button class="btn btn-primary"> about </button>
+                    <a href="Toko.html"><button class="btn btn-danger"> home </button></a> 
+                    <a href="company profil.html"><button class="btn btn-primary"> about </button></a>
                     <button class="btn btn-danger"> toko </button>
                     <button class="btn btn-primary"> help </button>
                 </div>
@@ -46,11 +101,11 @@
                 </div>
                 <div class="column" style="border: 2px solid gray; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; padding: 3px; margin: 3px;">
                     <input type="checkbox" name="pilih" value="Pilih" style="margin-left: 5px;"> Bongsang <font style="float: right; margin-right: 3px;">Rp15.000,-</font><br>
-                    <img src="contoh.jpg" alt="prodak" height="120px" style="float:left; margin-left: 23px; margin-right: 5px;"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <img src="produk.jpg" alt="prodak" height="120px" style="float:left; margin-left: 23px; margin-right: 5px;"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </div>
                 <div class="column" style="border: 2px solid gray; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; padding: 3px; margin: 3px;">
                     <input type="checkbox" name="pilih" value="Pilih" style="margin-left: 5px;"> Nama Barang <br>
-                    <img src="contohuser.jpg" alt="prodak" height="120px" style="float:left; margin-left: 23px; margin-right: 5px;"><p style="width: 80%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><font style="float: right; margin-right: 3px;">Rp15.000,-</font><br>
+                    <img src="produk1.jpg" alt="prodak" height="120px" style="float:left; margin-left: 23px; margin-right: 5px;"><p style="width: 80%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><font style="float: right; margin-right: 3px;">Rp15.000,-</font><br>
                 </div>
             </div>
             <div class="col-xl-4" style="border: 2px solid gray; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; padding: 3px;">
@@ -62,20 +117,21 @@
         <br>
         <hr size="10px"><br>
         <div class="row" style="border-block: 2px;">
-            <div class="col-xl-4">
+            <div class="col-xl-3">
                 <div>
-                    <img src="contoh.jpg" alt="bongsang" width="34%" style="margin-left: 25%;">
+                    <img src="LogoBongsang.png" alt="bongsang" width="52%" style="margin-left: 25%;">
                     <br>
                     <hr>
                 </div>
                 <div style="border-top: lightgray; border: 2px;">
-                    Desa Pringgacala, Kecamatan Karangampel, Kabupaten Indramayu, Jawa Barat.  Kode Pos: 45283
+                    Desa Pringgacala, Ke. Karangampel, Kab. Indramayu, Jawa Barat.  Kode Pos: 45283
                 </div>
             </div>
+            <div class="col-xl-1"></div>
             <div class="col-xl-2" style="text-decoration: none;">
                 <font>MAIN MENU</font><br>
-                <a href="">Home</a><br>
-                <a href="">About</a><br>
+                <a href="Toko.html">Home</a><br>
+                <a href="company profil.html">About</a><br>
                 <a href="">Toko</a><br>
                 <a href="">Help</a><br>
             </div>
