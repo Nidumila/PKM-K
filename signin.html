@@ -9,19 +9,12 @@
 			background-size : cover;
 			background-attachment : fixed;
 		}
-	button{
-		background: rgba(0,0,0,0);
-	}
-    img{
-        opacity: 0.2;
-    }
 	</style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light ">
-        <div class="container" widht="100%" style="text-align: center; float: right;">
-			<div class="col-xl-8"></div>
-			<div class="col-xl-4">
+        <div class="container justify-content-end" widht="100%" style="text-align: center;">
+			<div class="col-xl-5">
                 <a href="company profil.html"><button class="btn btn-warning">Home</button></a>
             	<a href="Toko.html"><button class="btn btn-warning">Toko </button></a>
             	<a href="signin.html"><button class="btn btn-warning">Sign In </button></a>
@@ -30,13 +23,26 @@
         </div>            
     </nav>
     <div class="container">
-        <div class="row">
-            <div class="col-xl-7"></div>
+        <div class="row  justify-content-end">
             <div class="col-xl-5" style="margin-top: 30px; ">
                 <div class="column" style=" -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; padding: 3px; margin: 3px; background: white;">
-                    <center><img src="LogoBongsang.png" alt="Bongsang" width="250px"></center>
-                    <form action="" method="get">
-                        <input type="email">
+                    <center><img src="LogoAne.png" alt="Bongsang" width="300px" style="margin: 25px;"><br>
+                    <font size="5" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;"><b>Sign In</b></font></center>
+                    <form action="" method="get" style="margin-left: 25px; margin-right: 25px; margin-bottom: 25px;">
+                        <div class="form-grup">
+                            <label for="inputEmail"> Email : </label>
+                            <input type="email" class="form-control" id="inputEmail" aria-describedby="helpEmail" placeholder="KeranjangAne@bongsang.id">
+                            <small id="inputEmail" class="from-text text-muted">Mohon Masukkan Email Anda</small>
+                        </div>
+                        <div class="form-grup">
+                            <label for="inputPassword"> Password : </label>
+                            <input type="password" class="form-control" id="inputPassword" aria-describedby="helpPassword" placeholder="Password">
+                            <small id="inputPassword" class="from-text text-muted">Mohon Masukkan Password Anda</small>
+                        </div>
+                        <p style="font-size: smaller;"><input type="checkbox" value="akun"> Ingat Selalu Saya</p>
+                        <button type="submit" class="btn btn-primary kirim" onclick="validasi()" class="close" data-dismiss="alert">Kirim</button>
+                        <br>
+                        <small id="signin" class="from-text text-muted">Belum punya akun? <a href="signup.html">Daftar</a></small>
                     </form>
                 </div>
             </div>

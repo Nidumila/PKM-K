@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.css">
+	<style type="text/css">
+	body {
+			background-image: url(produk1.jpg);
+			background-size : cover;
+			background-attachment : fixed;
+            background-position-y: bottom;
+		}
+	</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container" widht="100%" style="text-align: center; float: right;">
+			<div class="col-xl-8"></div>
+			<div class="col-xl-4">
+                <a href="company profil.html"><button class="btn btn-warning">Home</button></a>
+            	<a href="Toko.html"><button class="btn btn-warning">Toko </button></a>
+            	<a href="signin.html"><button class="btn btn-warning">Sign In </button></a>
+				<a href="signup.html"><button class="btn btn-warning">Sign Up </button></a>
+            </div>
+        </div>            
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="column" style=" -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; padding: 3px; margin: 3px; background: white;">
+                    <center><img src="LogoBongsang.png" alt="Bongsang" width="250px"><br>
+                    <font size="5"><b>Sign Up</b></font></center>
+                    <form action="" method="get" style="margin-left: 25px; margin-right: 25px; margin-bottom: 25px;">
+                        <div class="form-grup">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="inputNama"> Email</label>
+                                </div>
+                                <div class="col-sm-1">:</div>
+                                <div class="col-sm-7">
+                                    <input type="email" class="form-control" id="inputEmail" aria-describedby="helpNama" placeholder="KeranjangAne@bongsang.id" style="margin-top: 5px; margin-bottom; 5px;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="inputEmail"> Sandi</label>
+                                </div>
+                                <div class="col-sm-1">:</div>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="emailPassword" aria-describedby="helpEmail" placeholder="Password" style="margin-top: 5px; margin-bottom; 5px;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="inputEmail"> Confirm Sandi</label>
+                                </div>
+                                <div class="col-sm-1">:</div>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="emailPassword" aria-describedby="helpEmail" placeholder="Password" style="margin-top: 5px; margin-bottom; 5px;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                     <label for="inputNama"> Nama Lengkap </label>
+                                </div>
+                                <div class="col-sm-1">:</div>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="emailNama" aria-describedby="helpNama" placeholder="Nama Lengkap" style="margin-top: 5px; margin-bottom; 5px;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="inputEmail"> Nomor Ponsel </label>
+                                </div>
+                                <div class="col-sm-1">:</div>
+                                <div class="col-sm-7">
+                                    <input type="Telepon" class="form-control" id="nomor telepon" aria-describedby="helpnomortelepon" placeholder="Telepon" style="margin-top: 5px; margin-bottom; 5px;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="inputEmail"> Jenis Kelamin</label>
+                                </div>
+                                <div class="col-sm-1">:</div>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="alamat" aria-describedby="helpEmail" placeholder="alamat" style="margin-top: 5px; margin-bottom; 5px;">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary Daftar" onclick="validasi()" class="close" data-dismiss="alert">Daftar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
