@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Keranjang Ane</title>
+    <link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.css">
+    <script type="text/javascript" src="Bootstrap/js/jquery.js"></script>
+    <script type="text/javascript" src="Bootstrap/js/bootstrap.js"></script>
+    <style>
+        #searchbox {
+            border: 2px solid gray;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px; 
+            border-radius: 8px;
+            width: 250%;
+            height: 35px;
+        }
+        input:focus::-webkit-input-placeholder {
+            color: transparent;
+        }
+        input:focus:-moz-placeholder {
+            color: transparent;
+        }
+        input:focus::-moz-placeholder {
+            color: transparent;
+        }
+        #searchbox input {
+            outline: none;
+        }
+        #searchbox input[type="text"] {
+            background: transparent;
+            padding: 5px 0px 5px 10px;
+            border-width: 0px;
+            font-family: "Arial Narrow", Arial, sans-serif;
+            font-size: 15px;
+            color: #828282;
+            width: 70%;
+            display: inline-table;
+            vertical-align: top;
+        }
+        #button-submit {
+            background: url(off.png);
+            float: left;
+            border-width: 0px;
+            cursor: pointer;
+            margin-left: 10px;
+            margin-top: 4px;
+            width: 21px;
+            height: 22px;
+        }
+        #button-submit:hover {
+            background: url(on.png); 
+            float: left;;
+        }
+        #button-submit:active {
+            background: url(on.png);
+            float: left;
+            outline: none;
+        }
+        #button-submit::-moz-focus-inner {
+            border: 0;
+        }
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container" widht="100%" style="text-align: center;">
+                <div class="col-xl-2">
+                    <label><strong> Keranjang Ane </strong></label>
+                </div>
+                <div class="col-xl-2" style="text-align: left;">
+                    <form id="searchbox" method="get" action="/search" autocomplete="off" style="background-color: white;">
+                        <input name="cari" type="text" size="15" placeholder="Mau cari apa?" />
+                        <input id="button-submit" type="submit" value="" />
+                    </form>
+                </div>
+                <div class="col-xl-2">
+
+                </div>
+                <div class="col-xl-4" style="text-align: right;">
+                    <a href=""><button class="btn btn-danger"> home </button></a> 
+                    <a href="company profil.html"><button class="btn btn-primary"> about </button></a>
+                    <button class="btn btn-danger"> toko </button>
+                    <button class="btn btn-primary"> help </button>
+                </div>
+                <div class="col-xl-2">
+                    <a href="Keranjang.html"> <input type="image" src="LogoAne.png" height="60%" width="60%"> </a> 
+                </div>
+        </div>            
+    </nav>
+    <br><br>
+    <div class="container">
+        <div class="col" style="text-align: center;">
+        <img src="LogoAne.png" width="30%" height="30%">
+        </div>
+        <hr size="10px"><br>
+    </div>
+    <div class="container">
+        <div class="col-12" style="text-align: center;">
+            <img src="icon.png" width="50%">
+        </div>
+    </div>
+    <div class="container">
+        <hr size="10px"><br>
+        <h1 align="center"> Tentang Keranjang Ane </h1><br>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+        <div class="container" style="text-align: justify;">
+        <hr size="10px"><br>
+        <div class="row" style="border-block: 2px;">
+            <div class="col-xl-3">
+                <div>
+                    <img src="LogoBongsang.png" alt="bongsang" width="52%" style="margin-left: 25%;">
+                    <br>
+                    <hr>
+                </div>
+                <div style="border-top: lightgray; border: 2px;">
+                    Desa Pringgacala, Ke. Karangampel, Kab. Indramayu, Jawa Barat.  Kode Pos: 45283
+                </div>
+            </div>
+            <div class="col-xl-1"></div>
+            <div class="col-xl-2" style="text-decoration: none;">
+                <font>MAIN MENU</font><br>
+                <a href="Toko.html">Home</a><br>
+                <a href="company profil.html">About</a><br>
+                <a href="">Toko</a><br>
+                <a href="">Help</a><br>
+            </div>
+            <div class="col-xl-2" style="text-decoration: none;">
+                <font>COMPANY</font><br>
+                <a href="">UMKM</a><br>
+                <a href="">Careers</a><br>
+                <a href="">Berita</a><br>
+            </div>
+            <div class="col-xl-2" style="text-decoration: none;">
+                <font>DISCOVER</font><br>
+                <a href="">The Team</a><br>
+                <a href="">Our History</a><br>
+                <a href="">Brand Motto</a><br>
+            </div>
+            <div class="col-xl-2" style="text-decoration: none;">
+                <font>FIND US ON</font><br>
+                <a href="https://www.facebook.com/abo.pink.1">Facebook</a><br>
+                <a href="https://www.instagram.com/bongsang.id">Instagram</a><br>
+                <a href="https://www.youtube.com/channel/UCLLUo9HWtHM-fET-U79q4Kw">YouTube</a><br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer class="navbar navbar-expand-lg navbar-light bg-warning">
+        <font style="margin-left: 5%;">&copy 2019 Bongsang Keranjang Ane</font>
+    </footer>
+</body>
+</html>
