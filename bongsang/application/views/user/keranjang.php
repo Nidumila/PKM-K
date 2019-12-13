@@ -24,7 +24,7 @@
         </div>
         <div class="col-4" style="text-align: right;">
             <a href="<?= base_url('user/'); ?>"><button class="btn btn-danger"> home </button></a>
-            <a href="company profil.html"><button class="btn btn-primary"> about </button></a>
+            <a href="<?= base_url('user/procom'); ?>"><button class="btn btn-primary"> about </button></a>
             <button class="btn btn-danger"> toko </button>
             <a href="<?= base_url('user/help'); ?>"><button class="btn btn-primary"> help </button></a>
         </div>
@@ -99,10 +99,10 @@
         <div class="col-xl-4">
             <div class="container">
                 <div class="row">
-                    <div class="p-3 kotak">
+                    <div class="p-3 mt-1 kotak">
                         <p> Lokasi </p>
-                        <img src="lokasi-ikon.png" width="5%">
-                        <p>Jawa Barat, Kabupaten Indramayu, Karangampel. 45283</p>
+                        <img src="<?= base_url('Asset/img/icon/'); ?>lokasi-ikon.png" width="5%">
+                        Jawa Barat, Kabupaten Indramayu, Karangampel. 45283
                         <hr size="10px">
                         <table>
                             <tr>

@@ -49,4 +49,12 @@ class User extends CI_Controller
         $this->load->view('user/profile', $data);
         $this->load->view('template/toko_footer');
     }
+
+    public function procom()
+    {
+        $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
+        $this->load->view('template/toko_header');
+        $this->load->view('user/profile_company', $data);
+        $this->load->view('template/toko_footer');
+    }
 }
