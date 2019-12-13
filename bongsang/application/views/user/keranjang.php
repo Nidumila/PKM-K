@@ -62,7 +62,7 @@
                                 <a href="#plus-circle"><i class="fa fa-plus-circle"></i></a>
                             </center>
                             <center>
-                                <a href=""><img src="<?= base_url('Asset/img/'); ?>delete-ikon.png" width="28px"></a>
+                                <a href=""><img src="<?= base_url('Asset/img/icon/'); ?>delete-ikon.png" width="28px"></a>
                             </center>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                                 <a href="#plus-circle"><i class="fa fa-plus-circle"></i></a>
                             </center>
                             <center>
-                                <a href=""><img src="<?= base_url('Asset/img/'); ?>delete-ikon.png" width="28px"></a>
+                                <a href=""><img src="<?= base_url('Asset/img/icon/'); ?>delete-ikon.png" width="28px"></a>
                             </center>
                         </div>
                     </div>
@@ -101,20 +101,30 @@
                 <div class="row">
                     <div class="p-3 mt-1 kotak">
                         <p> Lokasi </p>
-                        <img src="<?= base_url('Asset/img/icon/'); ?>lokasi-ikon.png" width="5%">
-                        Jawa Barat, Kabupaten Indramayu, Karangampel. 45283
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="<?= base_url('Asset/img/icon/'); ?>lokasi-ikon.png" width="35px">
+                                </div>
+                                <div class="col-10">
+                                    <p>Jawa Barat, Kabupaten Indramayu, Karangampel. 45283</p>
+                                </div>
+                            </div>
+                        </div>
                         <hr size="10px">
                         <table>
                             <tr>
                                 <td> Metode Pengiriman </td>
                                 <td> : </td>
-                                <td><select name="Jurusan">
+                                <td>
+                                    <select class="custom-select" id="kategori" name="kategori" onchange="tampilkan()">
                                         <option value="">Pilih Pengiriman</option>
                                         <option value=" JNE">JNE</option>
                                         <option value="JNT">JNT </option>
                                         <option value="POS">POS</option>
                                         <option value="TIKI">TIKI</option>
-                                    </select></td>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Ringkasan Pemesanan</td>
@@ -132,11 +142,11 @@
                             <br>
                             <tr>
                                 <td>
-                                    <input type="name" name="kode voucher" placeholder="masukan Kode voucher">
+                                    <input type="text" class="form-control" name="voucher" id="voucher" placeholder="Kode voucher" style="margin-top: 5px; margin-bottom:5px;">
                                 </td>
                                 <td>:</td>
                                 <td>
-                                    <button>Gunakan</button>
+                                    <button type="submit" class="btn btn-secondary" name="gunakan" style="margin-top: 5px;">Tambah</button>
                                 </td>
                             </tr>
                             <tr>
@@ -145,17 +155,10 @@
                                 <td>RP. - </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <button>Pilih Metode Pembayaran</button>
-                                </td>
-                                <td>:</td>
-                                <td> <select name="Jurusan">
-                                        <option value="">Pilih Bayar</option>
-                                        <option value=""></option>
-                                        <option value=""> </option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                    </select>
+                                <td colspan="3" class="text-center">
+                                    <div class="container">
+                                        <button type="submit" class="btn btn-warning" name="bayar" style="margin-top: 5px;">Lanjut Membayar</button>
+                                    </div>
                                 </td>
                             </tr>
                         </table>
