@@ -34,7 +34,7 @@
     </div>
 </nav>
 <br><br>
-<div class="container">
+<div class=" container">
     <div class="row">
         <div class="col-8" style="border: 2px solid gray">
             <div class="row">
