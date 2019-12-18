@@ -34,7 +34,7 @@
     </div>
 </nav>
 <br><br>
-<div class=" container">
+<div class="container">
     <div class="row">
         <div class="col-8" style="border: 2px solid gray">
             <div class="row">
@@ -106,37 +106,11 @@
     <div class="row">
         <div class="col-8">
             <div class="row">
-                <div class="col-4" style="border: 2px solid gray"><a href="#Deskripsi Product"><i class="fa fa-clipboard"></i></a>
-                    <label>Deskripsi Product</label>
+                <div class="col-4" style="border: 2px solid gray"><a href="<?= base_url('user/produk/'); ?>"><i class="fa fa-clipboard"> Deskripsi Product</i></a>
                 </div>
-                <div class="col-4" style="border: 2px solid gray"><a href="#pencil-square-o"><i class="fa fa-pencil-square-o"></i></a>
-                    <label> Ulasan Product</label>
+                <div class="col-4" style="border: 2px solid gray"><a href="<?= base_url('user/ulasan/'); ?>"><i class="fa fa-pencil-square-o"> Ulasan Product</i></a>
                 </div>
-                <div class="col-4" style="border: 2px solid gray"><a href="#"><i class="fa fa-group"></i><span class="text-muted"></span></a>
-                    <label> Diskusi Product</label>
+                <div class="col-4" style="border: 2px solid gray"><a href="<?= base_url('user/diskusi/'); ?>"><i class="fa fa-pencil-square-o"> Diskusi Produk</i></a>
                 </div>
             </div>
         </div>
-        <div class="col-8" style="border: 2px solid gray" id="Deskripsi Product">
-            <label>
-                + Tanpa Pengawet dari Formalin dan borax<br>
-                + Tanpa Pemutih<br><br>
-                Informasi nilai gizi:<br>
-                - Kalori<br>
-                - Protein<br>
-                - Karbohidrat<br>
-                - Kalsium<br>
-                - Fosfor<br>
-                - Zat Besi<br>
-                - Vitamin A<br>
-                - Vitamin B<br>
-                - Vitamin C<br><br>
-                Komposisi : <br>
-                - Bonggol Pisang<br>
-                - Tepung<br>
-                - Bawang Merah<br>
-                - Rempah Rempah<br>
-            </label>
-        </div>
-    </div>
-</div>

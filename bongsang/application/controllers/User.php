@@ -31,8 +31,28 @@ class User extends CI_Controller
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
         $this->load->view('template/toko_header');
         $this->load->view('user/produk', $data);
+        $this->load->view('user/descripsi', $data);
         $this->load->view('template/toko_footer');
     }
+
+    public function ulasan()
+    {
+        $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
+        $this->load->view('template/toko_header');
+        $this->load->view('user/produk', $data);
+        $this->load->view('user/ulasanproduk', $data);
+        $this->load->view('template/toko_footer');
+    }
+
+    public function diskusi()
+    {
+        $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
+        $this->load->view('template/toko_header');
+        $this->load->view('user/produk', $data);
+        $this->load->view('user/diskusiproduk', $data);
+        $this->load->view('template/toko_footer');
+    }
+
 
     public function help()
     {
