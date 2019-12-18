@@ -40,8 +40,9 @@
             <div class="column kotak">
                 <input type="checkbox" name="pilih" value="Pilih" style="margin-left: 5px;"> Pilih Semua
                 <a href="" type="reset" style="float: right; margin-right: 5px;">Hapus Semua</a>
-                <form action="test_cek" method="POST">
+                
             </div>
+            <form action="test_cek" method="POST">
             <div class="column mt-1 kotak">
                 <input class="mt-2" type="checkbox" name="pilih" value="Pilih" style="margin-left: 5px;"> Bongsang Original <br>
                 <br>
@@ -70,11 +71,11 @@
                             </center>
                             <center class="mb-3">
                                 <a href="#minus-circle"><i class="fa fa-minus-circle"></i></a>
-                                0
+                                25
                                 <a href="#plus-circle"><i class="fa fa-plus-circle"></i></a>
                             </center>
                             <center>
-                                <a href=""><img src="<?= base_url('Asset/img/'); ?>delete-ikon.png" width="28px"></a>
+                                <a href=""><img src="<?= base_url('Asset/img/icon/'); ?>delete-ikon.png" width="28px"></a>
                             </center>
                         </div>
                     </div>
@@ -109,18 +110,18 @@
                             </center>
                             <center class="mb-3">
                                 <a href="#minus-circle"><i class="fa fa-minus-circle"></i></a>
-                                2
+                                15
                                 <a href="#plus-circle"><i class="fa fa-plus-circle"></i></a>
                             </center>
                             <center>
-                                <a href=""><img src="<?= base_url('Asset/img/'); ?>delete-ikon.png" width="28px"></a>
+                                <a href=""><img src="<?= base_url('Asset/img/icon/'); ?>delete-ikon.png" width="28px"></a>
                             </center>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="column mt-1 kotak">
-                <input class="mt-2" type="checkbox" name="pilih" value="Pilih" style="margin-left: 5px;"> Bongsang Balado <br>
+                <input class="mt-2" type="checkbox" name="pilih" value="Pilih" style="margin-left: 5px;"> Bongsang Jagung Bakar <br>
                 <br>
                 <div class="container pb-3">
                     <div class="row">
@@ -133,7 +134,7 @@
                             <p>Tau bonggol pisang belum? Kalau belum mimin kasih tau yah.
                             Bonggol pisang adalah bagian dari pohon pisang bagian bawah akar yang biasa dibuang oleh Petani Pisang atau Masyrakat. Dannnn ternyata kandungan dari Bonggol Pisang banyak manfaatnya lohh. Kepo kan?</p>
 
-                            <p>Dengan varian rasa Rumput Laut</p>
+                            <p>Dengan varian rasa Jagung Bakar</p>
 
 
                             <p>Banyak manfaat yang terkandung dalam Bongsang ini, seperti: Kalori, Protein, Lemak, Karbohidrat, Kalsium, Fosfor, Zat Besi, Vitamin A, Vitamin B1, Vitamin C, Air, 😊 .</p>
@@ -147,20 +148,94 @@
                             </center>
                             <center class="mb-3">
                                 <a href="#minus-circle"><i class="fa fa-minus-circle"></i></a>
-                                2
+                                40
                                 <a href="#plus-circle"><i class="fa fa-plus-circle"></i></a>
                             </center>
                             <center>
-                                <a href=""><img src="<?= base_url('Asset/img/'); ?>delete-ikon.png" width="28px"></a>
+                                <a href=""><img src="<?= base_url('Asset/img/icon/'); ?>delete-ikon.png" width="28px"></a>
                             </center>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
+             <div class="column mt-1 kotak">
+                <input class="mt-2" type="checkbox" name="pilih" value="Pilih" style="margin-left: 5px;"> Bongsang Pedas <br>
+                <br>
+                <div class="container pb-3">
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="pl-2" src="<?= base_url('Asset/img/'); ?>bongsang.jpg" alt="prodak" height="180px" style="">
+                        </div>
+                        <div class="col-6">
+                            <p>Wazzup guys! ✋</p>
 
+                            <p>Tau bonggol pisang belum? Kalau belum mimin kasih tau yah.
+                            Bonggol pisang adalah bagian dari pohon pisang bagian bawah akar yang biasa dibuang oleh Petani Pisang atau Masyrakat. Dannnn ternyata kandungan dari Bonggol Pisang banyak manfaatnya lohh. Kepo kan?</p>
+
+                            <p>Dengan varian rasa Pedas</p>
+
+
+                            <p>Banyak manfaat yang terkandung dalam Bongsang ini, seperti: Kalori, Protein, Lemak, Karbohidrat, Kalsium, Fosfor, Zat Besi, Vitamin A, Vitamin B1, Vitamin C, Air, 😊 .</p>
+                            
+
+                            <p>Untuk peremajaan kulit, antioksidan, pelembapan kulit, serat untuk anak2 memperlancar BAB</p> 
+                        </div>
+                        <div class="col-3">
+                            <center class="mb-3">
+                                <font size="5">Rp.15.000,-</font>
+                            </center>
+                            <center class="mb-3">
+                                <a href="#minus-circle"><i class="fa fa-minus-circle"></i></a>
+                                30
+                                <a href="#plus-circle"><i class="fa fa-plus-circle"></i></a>
+                            </center>
+                            <center>
+                                <a href=""><img src="<?= base_url('Asset/img/icon/'); ?>delete-ikon.png" width="28px"></a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="column mt-1 kotak">
+                <input class="mt-2" type="checkbox" name="pilih" value="Pilih" style="margin-left: 5px;"> Bongsang Pedas Manis<br>
+                <br>
+                <div class="container pb-3">
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="pl-2" src="<?= base_url('Asset/img/'); ?>bongsang.jpg" alt="prodak" height="180px" style="">
+                        </div>
+                        <div class="col-6">
+                            <p>Wazzup guys! ✋</p>
+
+                            <p>Tau bonggol pisang belum? Kalau belum mimin kasih tau yah.
+                            Bonggol pisang adalah bagian dari pohon pisang bagian bawah akar yang biasa dibuang oleh Petani Pisang atau Masyrakat. Dannnn ternyata kandungan dari Bonggol Pisang banyak manfaatnya lohh. Kepo kan?</p>
+
+                            <p>Dengan varian rasa Pedas Manis</p>
+
+
+                            <p>Banyak manfaat yang terkandung dalam Bongsang ini, seperti: Kalori, Protein, Lemak, Karbohidrat, Kalsium, Fosfor, Zat Besi, Vitamin A, Vitamin B1, Vitamin C, Air, 😊 .</p>
+                            
+
+                            <p>Untuk peremajaan kulit, antioksidan, pelembapan kulit, serat untuk anak2 memperlancar BAB</p> 
+                        </div>
+                        <div class="col-3">
+                            <center class="mb-3">
+                                <font size="5">Rp.15.000,-</font>
+                            </center>
+                            <center class="mb-3">
+                                <a href="#minus-circle"><i class="fa fa-minus-circle"></i></a>
+                                2
+                                <a href="#plus-circle"><i class="fa fa-plus-circle"></i></a>
+                            </center>
+                            <center>
+                                <a href=""><img src="<?= base_url('Asset/img/icon/'); ?>delete-ikon.png" width="28px"></a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </form>
+</div>
         <div class="col-xl-4">
             <div class="container">
                 <div class="row">
