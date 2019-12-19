@@ -41,12 +41,16 @@
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
 <script src="<?= base_url('Asset/js/init/');  ?>fullcalendar-init.js"></script>
+<script defer src="<?= base_url('Asset/js/');  ?>all.js"></script>
 
 <!--Local Stuff-->
 <script>
-    $('.custom-file-input').onChange(function() {
-        let fileName = $(this).val().split('\\').pop();
-        $(this).next('.custom-file-label').addClass("selected").html(fileName);
+    new FroalaEditor('textarea#myEditor', {
+        iconsTemplate: 'font_awesome_5',
+        toolbarInline: false
+    });
+    new FroalaEditor('#froala-editor', {
+        iconsTemplate: 'font_awesome_5'
     });
 
     jQuery(document).ready(function($) {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Keranjang Ane</title>
+
     <link rel="shortcut icon" href="<?= base_url('Asset/img/');  ?>icon.png">
     <link rel="stylesheet" type="text/css" href="<?= base_url('Asset/');  ?>css/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url('Asset/');  ?>css/bootstrap.css">
@@ -14,14 +15,15 @@
     <script type="text/javascript" src="<?= base_url('Asset/');  ?>js/jquery.js"></script>
     <script type="text/javascript" src="<?= base_url('Asset/');  ?>js/bootstrap.js"></script>
     <script type="text/javascript" src="<?= base_url('Asset/');  ?>js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <style>
         #searchbox {
             border: 2px solid gray;
-            -moz-border-radius: 8px;
-            -webkit-border-radius: 8px;
-            border-radius: 8px;
-            width: 250%;
-            height: 35px;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            border-radius: 20px;
+            width: 100%;
+            height: 40px;
         }
 
         input:focus::-webkit-input-placeholder {
@@ -45,7 +47,7 @@
             padding: 5px 0px 5px 10px;
             border-width: 0px;
             font-family: "Arial Narrow", Arial, sans-serif;
-            font-size: 15px;
+            font-size: 18px;
             color: #828282;
             width: 70%;
             display: inline-table;
@@ -55,18 +57,17 @@
         #button-submit {
             background: url(<?= base_url('Asset/img/');  ?>off.png);
             float: left;
+            margin-top: 7px;
             border-width: 0px;
             cursor: pointer;
             margin-left: 10px;
-            margin-top: 4px;
-            width: 21px;
-            height: 22px;
+            width: 20px;
+            height: 21px;
         }
 
         #button-submit:hover {
             background: url(<?= base_url('Asset/img/');  ?>on.png);
             float: left;
-            ;
         }
 
         #button-submit:active {

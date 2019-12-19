@@ -73,7 +73,7 @@ class User extends CI_Controller
     {
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
         $this->load->view('template/toko_header');
-        $this->load->view('template/help', $data);
+        $this->load->view('user/help', $data);
         $this->load->view('template/toko_footer');
     }
 

@@ -32,56 +32,51 @@
         </div>
     </div>
 </nav>
-<div class="container">
-    <br><br>
-    <form style="border: 2px solid gray">
-        <div class="row">
-            <div class="col" align="right">
-                <img src="contohuser.jpg" width="50%">
-            </div>
-            <div class="col">
-                <br>
-                <br>
-                <h3>Nama Lengkap User </h3>
-                <br>
-                <p>akun sudah terverivikasi</p>
-            </div>
-        </div>
-    </form>
-</div>
 <br><br>
 <div class="container">
+    <div class="col" style="text-align: center;">
+        <img src="produk1.jpg" width="100%" height="30%">
+        <p> Hai Pelanggan Ada Yang bisa diBantu??? </p>
+    </div>
+    <hr size="10px"><br>
+</div>
+<div class="container">
+    <div class="col-12">
+        <p> Pertanyaan yang mungkin anda maksud : </p>
+        <br>
+        <div class="row">
+            <div class="col-6">
+                <p>- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                <p>- tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                <p>- veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+            </div>
+            <div class="col-6">
+                <p>- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                <p>- tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                <p>- veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+            </div>
+        </div>
+    </div>
+</div>
+<hr size="10px">
+<div class="container">
+    <p>Topik</p>
     <div class="row">
-        <div class="col-5" style="border: 2px solid gray">
-            <div class="row">
-                <div class="col-2">
-                    <img src="user-ikon.png" width="100%" align="center">
-                </div>
-                <div class="col-10" align="left">
-                    <h3>Profile Saya</h3>
-                    <p>Nama Lengkap</p>
-                    <br>
-                    <p>Jenis Kelamin</p>
-                    <br>
-                    <p>Tanggal Lahir</p>
-                    <br>
-                    <p>Alamat Email</p>
-                    <br>
-                    <p>Nomor Telepon</p>
-                </div>
-            </div>
+        <div class="col-3">
+            <img src="akun.png" width="70%" height="70%">
+
         </div>
-        <div class="col-2"></div>
-        <div class="col-5" style="border: 2px solid gray">
-            <div class="row">
-                <div class="col-2">
-                    <img src="home-ikon.png" width="100%" align="center">
-                </div>
-                <div class="col-10" align="left">
-                    <h3>Alamat Saya</h3>
-                    <p>Alamat Pengiriman utama</p>
-                </div>
-            </div>
+        <div class="col-3">
+            <img src="icon.png" width="70%" height="70%">
+
         </div>
+        <div class="col-3">
+            <img src="logo pembayaran.png" width="70%" height="70%">
+
+        </div>
+        <div class="col-3">
+            <img src="pengiriman.jpg" width="70%" height="70%">
+        </div>
+
     </div>
 </div>
