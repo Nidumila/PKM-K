@@ -67,8 +67,21 @@ class Awal extends CI_Controller
             $this->load->view('template/awal_footer');
         } else {
             $this->load->helper('date');
+            $id = $this->db->query('SELECT max(id_member) AS id FROM member')->row_array();
+            $kode = $id['id'];
+            $iso = substr($kode, 10, 3);
+            $tambah = (int) $iso + 1;
+            $date = date("Ymd");
+            $jk = $this->input->post('jenis_kelamin');
+            if (strlen($tambah) == 1) {
+                $format = "M" . $jk . $date . "00" . $tambah;
+            } else if (strlen($tambah) == 2) {
+                $format = "M" . $jk . $date . "0" . $tambah;
+            } else if (strlen($tambah) == 3) {
+                $format = "M" . $jk . $date . $tambah;
+            }
             $data = [
-                'id_member' => $this->input->post('jenis_kelamin') . mdate("%H%i%s", date()),
+                'id_member' => $format,
                 'nama_member' => $this->input->post('nama', true),
                 'jenis_kelamin' => $this->input->post('jenis_kelamin'),
                 'email' => $this->input->post('email', true),

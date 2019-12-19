@@ -39,8 +39,21 @@ class Control extends CI_Controller
             $this->load->view('template/footer');
         } else {
             $this->load->helper('date');
+            $id = $this->db->query('SELECT max(id_admin) AS id FROM admin')->row_array();
+            $kode = $id['id'];
+            $iso = substr($kode, 10, 3);
+            $tambah = (int) $iso + 1;
+            $date = date("Ymd");
+            $jk = $this->input->post('jenis_kelamin');
+            if (strlen($tambah) == 1) {
+                $format = "A" . $jk . $date . "00" . $tambah;
+            } else if (strlen($tambah) == 2) {
+                $format = "A" . $jk . $date . "0" . $tambah;
+            } else if (strlen($tambah) == 3) {
+                $format = "A" . $jk . $date . $tambah;
+            }
             $data = [
-                'id_admin' => $this->input->post('jenis_kelamin') . "A" . mdate("%Y%m%d", date()),
+                'id_admin' => $format,
                 'nama_admin' => $this->input->post('nama', true),
                 'jenis_kelamin' => $this->input->post('jenis_kelamin', true),
                 'nomor_ponsel' => $this->input->post('ponsel', true),
@@ -66,7 +79,7 @@ class Control extends CI_Controller
         $this->form_validation->set_rules('kategori', 'Kategori Produk', 'required|trim', ['required' => 'Pilih kategori yang sesuai']);
         $this->form_validation->set_rules('sub', 'Sub Kategori', 'required|trim');
         $this->form_validation->set_rules('stok', 'Stok Produk', 'required|trim');
-
+        $this->form_validation->set_rules('desk', 'Deskripsi', 'required|trim');
         if ($this->form_validation->run() == false) {
             $this->load->view('template/head');
             $this->load->view('template/sidebar', $data);
@@ -75,8 +88,21 @@ class Control extends CI_Controller
             $this->load->view('template/footer');
         } else {
             $this->load->helper('date');
+            $id = $this->db->query('SELECT max(id_barang) AS id FROM produk')->row_array();
+            $kode = $id['id'];
+            $iso = substr($kode, 2, 3);
+            $tambah = (int) $iso + 1;
+            $init = $this->input->post('nama');
+            $kod = substr($init, 0, 1);
+            if (strlen($tambah) == 1) {
+                $format = "P" . $kod . "00" . $tambah;
+            } else if (strlen($tambah) == 2) {
+                $format = "P" . $kod . "0" . $tambah;
+            } else if (strlen($tambah) == 3) {
+                $format = "P" . $kod . $tambah;
+            }
             $data = [
-                'id_barang' => 'BB' . $this->input->post('stok', true),
+                'id_barang' => $format,
                 'nama_barang' => $this->input->post('nama', true),
                 'kategori' => $this->input->post('kategori', true),
                 'sub_pilihan' => $this->input->post('sub', true),

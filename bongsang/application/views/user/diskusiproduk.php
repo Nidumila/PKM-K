@@ -1,29 +1,36 @@
 <div class="col-8" style="border: 2px solid gray" id="Deskripsi Product">
-	<script type="text/javascript" src="tinymce/tiny_mce.js"></script>
-	<script type="text/javascript">
-		tinyMCE.init({
-		// General options
-		mode : "textareas",
-		theme : "advanced",
-	});
-</script>
-<table>
-	<tr>
-		<td>Judul</td>
-		<td>:</td>
-		<td><input type="text" name="Judul"></td>
-	</tr>
-	<tr>
-		<td>Kategori</td>
-		<td>:</td>
-		<td><input type="text" name="Kategori"></td>
-	</tr>
-	<tr>
-		<td>Deskripsi Artikel</td>
-		<td>:</td>
-		<td><textarea name="Deskripsi Artikel"></textarea></td>
-	</tr>
-</table>
+
+	<!------ Include the above in your HEAD tag ---------->
+
+	<div class="chat_window">
+		<div class="top_menu">
+			<div class="buttons">
+				<div class="button close"></div>
+				<div class="button minimize"></div>
+				<div class="button maximize"></div>
+			</div>
+			<div class="title">Chat</div>
+		</div>
+		<ul class="messages"></ul>
+		<div class="bottom_wrapper clearfix">
+			<div class="message_input_wrapper">
+				<input class="message_input" placeholder="Type your message here..." />
+			</div>
+			<div class="send_message">
+				<div class="icon"></div>
+				<div class="text">Send</div>
+			</div>
+		</div>
+	</div>
+	<div class="message_template">
+		<li class="message">
+			<div class="avatar"></div>
+			<div class="text_wrapper">
+				<div class="text">
+				</div>
+			</div>
+		</li>
+	</div>
 </div>
-    </div>
+</div>
 </div>
