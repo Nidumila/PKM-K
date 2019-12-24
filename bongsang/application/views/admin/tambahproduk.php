@@ -71,8 +71,16 @@
                                         <?= form_error('stok', '<small class="text-danger pl-1">', '</small>') ?>
                                     </div>
                                 </div>
-                                <div class="row justify-content-end">
-                                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-6">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label> Deskripsi Produk </label>
+                                    </div>
+                                    <div class="col">
+                                        <textarea name="desk" id="myEditor"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-2">
                                         <button type="submit" class="btn btn-primary Daftar" name="daftar" style="margin-top: 5px;">Tambah</button>
                                     </div>
                                 </div>

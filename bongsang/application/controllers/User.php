@@ -47,6 +47,7 @@ class User extends CI_Controller
         // $data['produk'] = $this->db->get_where('produk', ['id_barang' => $this->session->produkdata('id_barang')])->row_array();
         $this->load->view('template/toko_header');
         $this->load->view('user/produk', $data);
+        $this->load->view('user/descripsi', $data);
         $this->load->view('template/toko_footer');
     }
 

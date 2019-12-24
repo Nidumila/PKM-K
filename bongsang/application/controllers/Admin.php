@@ -22,35 +22,42 @@ class Admin extends CI_Controller
                 $email = $this->input->post('email'),
                 $sandi = $this->input->post('sandi'),
             ];
+            $cpt = $this->input->post("cpt", true);
+            $rescpt = $this->input->post("rescpt", true);
 
             $email = $this->input->post('email');
             $sandi = $this->input->post('sandi');
 
             $admin = $this->db->get_where('admin', ['email' => $email])->row_array();
 
-            if ($admin != null) {
-                if ($admin['admin_validasi'] == 1) {
-                    if ($this->db->get_where('admin', ['password' => $sandi])->row_array()) {
-                        $data = [
-                            'email' => $admin['email']
-                        ];
-                        $this->session->set_userdata($data);
-                        if ($admin['role_admin'] == 0) {
-                            redirect('control');
+            if ($cpt != $rescpt) {
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" style="margin-top: 10px; margin-left: 25px; margin-right: 25px;" role="alert">Captcha belum tepat, Silahkan ulangi lagi</div>');
+                redirect('admin');
+            } else {
+                if ($admin != null) {
+                    if ($admin['admin_validasi'] == 1) {
+                        if ($this->db->get_where('admin', ['password' => $sandi])->row_array()) {
+                            $data = [
+                                'email' => $admin['email']
+                            ];
+                            $this->session->set_userdata($data);
+                            if ($admin['role_admin'] == 0) {
+                                redirect('control');
+                            } else {
+                                redirect('control/profile/');
+                            }
                         } else {
-                            redirect('control/profile/');
+                            $this->session->set_flashdata('message', '<div class="alert alert-danger" style="margin-top: 10px; margin-left: 25px; margin-right: 25px;" role="alert">Maaf. Kata sandi anda salah</div>');
+                            redirect('admin');
                         }
                     } else {
-                        $this->session->set_flashdata('message', '<div class="alert alert-danger" style="margin-top: 10px; margin-left: 25px; margin-right: 25px;" role="alert">Maaf. Kata sandi anda salah</div>');
+                        $this->session->set_flashdata('message', '<div class="alert alert-danger" style="margin-top: 10px; margin-left: 25px; margin-right: 25px;" role="alert">Maaf. Email ini belum diverifikasi</div>');
                         redirect('admin');
                     }
                 } else {
-                    $this->session->set_flashdata('message', '<div class="alert alert-danger" style="margin-top: 10px; margin-left: 25px; margin-right: 25px;" role="alert">Maaf. Email ini belum diverifikasi</div>');
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger" style="margin-top: 10px; margin-left: 25px; margin-right: 25px;" role="alert">Maaf. Email ini belum terdaftar</div>');
                     redirect('admin');
                 }
-            } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" style="margin-top: 10px; margin-left: 25px; margin-right: 25px;" role="alert">Maaf. Email ini belum terdaftar</div>');
-                redirect('admin');
             }
         }
     }

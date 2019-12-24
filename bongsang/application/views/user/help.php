@@ -7,7 +7,7 @@
                     <?= $member['nama_member']; ?>
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="<?= base_url('user/profile'); ?>">Profil Saya</a>
+                    <a class="dropdown-item" href="#">Profil Saya</a>
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                     <div class="dropdown-divider"></div>

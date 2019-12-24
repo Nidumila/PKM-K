@@ -48,8 +48,8 @@
                                                 </td>
                                             <tr>
                                             <?php
-                                                $nomor++;
-                                            endforeach; ?>
+                                            $nomor++;
+                                        endforeach; ?>
                                     </tbody>
                                 </table>
                             </div> <!-- /.table-stats -->

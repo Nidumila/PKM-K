@@ -108,7 +108,8 @@ class Control extends CI_Controller
                 'sub_pilihan' => $this->input->post('sub', true),
                 'harga' => $this->input->post('harga', true),
                 'stok' => $this->input->post('stok', true),
-                'gambar' => 'default.jpg'
+                'gambar' => 'default.jpg',
+                'deskripsi' => $this->input->post('desk', true)
             ];
 
             $this->db->insert('produk', $data);
@@ -130,6 +131,13 @@ class Control extends CI_Controller
         // } else {
         //     redirect('control/profile/');
         // }
+    }
+
+    public function hapus($id)
+    {
+        $where = array('id' => $id);
+        $this->db->delete('DELETE FROM produk WHERE `id_barang`=$id');
+        redirect('Control/adminlist');
     }
 
     public function produklist()

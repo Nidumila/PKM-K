@@ -37,6 +37,10 @@
     <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
+    <link href="<?= base_url('Asset/css/'); ?>../css/froala_style.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url('Asset/css/'); ?>froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<?= base_url('Asset/js/'); ?>froala_editor.pkgd.min.js"></script>
+
     <style>
         #weatherWidget .currentDesc {
             color: #ffffff !important;
@@ -103,10 +107,6 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
-
-        $("#imgInp").change(function() {
-            readURL(this);
-        });
     </script>
 </head>
 

@@ -34,14 +34,10 @@
 </nav>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-5">
-            <br>
+        <div class="col-6 m-4">
             <img class="w-100" src="<?= base_url('Asset/img/');  ?>LogoAne.png" alt="Logo">
         </div>
     </div>
-</div>
-<hr>
-<div class="container">
     <div class="row justify-content-center">
         <div class="col-3">
             <img class="w-100" src="<?= base_url('Asset/img/');  ?>DSCF2834.jpg" alt="Logo">
@@ -56,7 +52,7 @@
 </div>
 <hr>
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mb-4">
         <div class="col-8">
             <div id="slide" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
