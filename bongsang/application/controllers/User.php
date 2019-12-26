@@ -85,6 +85,13 @@ class User extends CI_Controller
         $this->load->view('user/profile', $data);
         $this->load->view('template/toko_footer');
     }
+     public function halamanpembayaran()
+    {
+        $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
+        $this->load->view('template/toko_header', $data);
+        $this->load->view('user/halamanpembayaran', $data);
+        $this->load->view('template/toko_footer');
+    }
 
     public function procom()
     {
