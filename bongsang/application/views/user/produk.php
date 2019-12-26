@@ -11,7 +11,7 @@
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="<?= base_url('awal/logout'); ?>">Logout</a>
+                    <a class="dropdown-item" href="<?= base_url('awal/logout'); ?>">Sign Out</a>
                 </div>
             </div>
         </div>

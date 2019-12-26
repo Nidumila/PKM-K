@@ -14,7 +14,7 @@ class User extends CI_Controller
     {
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
         $data['produk'] = $this->db->get('produk')->result_array();
-        $this->load->view('template/toko_header');
+        $this->load->view('template/toko_header', $data);
         $this->load->view('user/toko', $data);
         $this->load->view('template/toko_footer');
         $id = $this->input->post('id_barang');
@@ -33,7 +33,7 @@ class User extends CI_Controller
     public function keranjang()
     {
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
-        $this->load->view('template/toko_header');
+        $this->load->view('template/toko_header', $data);
         $this->load->view('user/keranjang', $data);
         $this->load->view('template/toko_footer');
     }
@@ -45,7 +45,7 @@ class User extends CI_Controller
         // }
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
         // $data['produk'] = $this->db->get_where('produk', ['id_barang' => $this->session->produkdata('id_barang')])->row_array();
-        $this->load->view('template/toko_header');
+        $this->load->view('template/toko_header', $data);
         $this->load->view('user/produk', $data);
         $this->load->view('user/descripsi', $data);
         $this->load->view('template/toko_footer');
@@ -54,7 +54,7 @@ class User extends CI_Controller
     public function ulasan()
     {
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
-        $this->load->view('template/toko_header');
+        $this->load->view('template/toko_header', $data);
         $this->load->view('user/produk', $data);
         $this->load->view('user/ulasanproduk', $data);
         $this->load->view('template/toko_footer');
@@ -63,7 +63,7 @@ class User extends CI_Controller
     public function diskusi()
     {
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
-        $this->load->view('template/toko_header');
+        $this->load->view('template/toko_header', $data);
         $this->load->view('user/produk', $data);
         $this->load->view('user/diskusiproduk', $data);
         $this->load->view('template/toko_footer');
@@ -73,7 +73,7 @@ class User extends CI_Controller
     public function help()
     {
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
-        $this->load->view('template/toko_header');
+        $this->load->view('template/toko_header', $data);
         $this->load->view('user/help', $data);
         $this->load->view('template/toko_footer');
     }
@@ -81,7 +81,7 @@ class User extends CI_Controller
     public function profile()
     {
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
-        $this->load->view('template/toko_header');
+        $this->load->view('template/toko_header', $data);
         $this->load->view('user/profile', $data);
         $this->load->view('template/toko_footer');
     }
@@ -89,7 +89,7 @@ class User extends CI_Controller
     public function procom()
     {
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
-        $this->load->view('template/toko_header');
+        $this->load->view('template/toko_header', $data);
         $this->load->view('user/profile_company', $data);
         $this->load->view('template/toko_footer');
     }
