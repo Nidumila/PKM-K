@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Des 2019 pada 08.52
--- Versi server: 10.4.8-MariaDB
--- Versi PHP: 7.3.10
+-- Waktu pembuatan: 26 Des 2019 pada 08.59
+-- Versi server: 10.1.38-MariaDB
+-- Versi PHP: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -37,7 +37,7 @@ CREATE TABLE `admin` (
   `password` varchar(40) NOT NULL,
   `alamat` varchar(128) NOT NULL,
   `gambar` varchar(128) NOT NULL,
-  `tanggal_daftar` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `tanggal_daftar` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `role_admin` int(1) NOT NULL,
   `admin_validasi` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -225,11 +225,11 @@ CREATE TABLE `sub_menu` (
 
 INSERT INTO `sub_menu` (`id_sub`, `menu_id`, `title`, `url`, `icon`, `active`) VALUES
 (1, 1, 'Dasboard', 'control', 'fa fa-laptop', 1),
-(2, 2, 'Daftar Member', 'control/memberlist/', 'fa fa-group', 1),
-(3, 2, 'Daftar Admin', 'control/adminlist/', 'ti-user', 1),
+(2, 2, 'Daftar Member', 'control/memberlist/', 'fa fa-users', 1),
+(3, 2, 'Daftar Admin', 'control/adminlist/', 'fa fa-cogs', 1),
 (4, 2, 'Tambah Admin', 'control/daftaradmin/', 'fa fa-user-plus', 1),
-(5, 3, 'Daftar Produk', 'control/produklist/', 'fa fa-tasks', 1),
-(6, 3, 'Tambah Produk', 'control/tambahproduk/', 'ti-email', 1),
+(5, 3, 'Daftar Produk', 'control/produklist/', 'fa fa-book', 1),
+(6, 3, 'Tambah Produk', 'control/tambahproduk/', 'fa fa-archive', 1),
 (7, 4, 'Daftar Transaksi', '', 'fa fa-tasks', 1);
 
 -- --------------------------------------------------------
