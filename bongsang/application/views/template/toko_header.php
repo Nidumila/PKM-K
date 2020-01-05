@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Keranjang Ane</title>
 
-    <link rel="shortcut icon" href="<?= base_url('Asset/img/');  ?>icon.png">
+    <link rel="shortcut icon" href="<?= base_url('Asset/img/');  ?>LogoBongsang.png">
     <link rel="stylesheet" type="text/css" href="<?= base_url('Asset/');  ?>css/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url('Asset/');  ?>css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url('Asset/');  ?>css/bootstrap.min.css">

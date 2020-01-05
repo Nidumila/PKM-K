@@ -26,36 +26,41 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-3 col-md-6">
                 <div class="card">
                     <div class="card-body">
                         <div class="stat-widget-five">
                             <div class="stat-icon dib flat-color-2">
-                                <i class="pe-7s-cart"></i>
+                                <i class="pe-7s-shopbag"></i>
                             </div>
                             <div class="stat-content">
                                 <div class="text-left dib">
                                     <div class="stat-text"><span class="count">3435</span></div>
-                                    <div class="stat-heading">Sales</div>
+                                    <div class="stat-heading"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-3 col-md-6">
                 <div class="card">
                     <div class="card-body">
                         <div class="stat-widget-five">
                             <div class="stat-icon dib flat-color-3">
-                                <i class="pe-7s-browser"></i>
+                                <i class="pe-7s-box1"></i>
                             </div>
                             <div class="stat-content">
                                 <div class="text-left dib">
-                                    <div class="stat-text"><span class="count">349</span></div>
-                                    <div class="stat-heading">Templates</div>
+                                    <div class="stat-text">
+                                        <span class="count">
+                                            <?php
+                                            $total = "SELECT COUNT(`id_barang`) AS `total` FROM `produk`";
+                                            $memjum = $this->db->query($total)->row_array();
+                                            echo $memjum['total'];
+                                            ?>
+                                        </span></div>
+                                    <div class="stat-heading">Produk</div>
                                 </div>
                             </div>
                         </div>
@@ -72,8 +77,15 @@
                             </div>
                             <div class="stat-content">
                                 <div class="text-left dib">
-                                    <div class="stat-text"><span class="count">2986</span></div>
-                                    <div class="stat-heading">Clients</div>
+                                    <div class="stat-text">
+                                        <span class="count">
+                                            <?php
+                                            $total = "SELECT COUNT(`id_member`) AS `total` FROM `member`";
+                                            $memjum = $this->db->query($total)->row_array();
+                                            echo $memjum['total'];
+                                            ?>
+                                        </span></div>
+                                    <div class="stat-heading">Member</div>
                                 </div>
                             </div>
                         </div>

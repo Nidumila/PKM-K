@@ -14,6 +14,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="box-title">Daftar Admin </h4>
+                            <?= $this->session->flashdata('message'); ?>
                         </div>
                         <div class="card-body--">
                             <div class="table-stats order-table ov-h">
@@ -27,6 +28,7 @@
                                             <th>Email</th>
                                             <th>Alamat</th>
                                             <th>Status</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -40,10 +42,16 @@
                                                 <td> <span class="tel"><?= $isi['nomor_ponsel']; ?></span></td>
                                                 <td> <span class="email"><?= $isi['email']; ?></span></td>
                                                 <td> <span class="address"><?= $isi['alamat']; ?></span></td>
+                                                <td> <span class="val"><?php
+                                                                        if ($isi['admin_validasi'] == 1) {
+                                                                            echo "Tervalidasi";
+                                                                        } else {
+                                                                            echo "Tidak Divalidasi";
+                                                                        }; ?></span></td>
                                                 <td>
                                                     <span class="validation">
-                                                        <a href="">edit</a>
-                                                        <a href="">delete</a>
+                                                        <a href="<?= base_url('control/edvalid/') . $isi['id_admin']; ?>">edit</a>
+                                                        <a href="<?= base_url('control/hapus/') . $isi['id_admin']; ?>">delete</a>
                                                     </span>
                                                 </td>
                                             <tr>

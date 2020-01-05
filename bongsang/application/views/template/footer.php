@@ -45,12 +45,28 @@
 
 <!--Local Stuff-->
 <script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#prev_foto').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $(document).ready(function() {
+        $('#image').change(function() {
+            readURL(this);
+        });
+
+    });
+    $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
     new FroalaEditor('textarea#myEditor', {
         iconsTemplate: 'font_awesome_5',
         toolbarInline: false
-    });
-    new FroalaEditor('#froala-editor', {
-        iconsTemplate: 'font_awesome_5'
     });
 
     jQuery(document).ready(function($) {
@@ -101,7 +117,7 @@
                 clickable: true
             }
         });
-        // Pie chart flotPie1  End
+        // Pie chart flotPie1 End
         // cellPaiChart
         var cellPaiChart = [{
                 label: "Direct Sell",
@@ -137,7 +153,7 @@
 
         });
         // cellPaiChart End
-        // Line Chart  #flotLine5
+        // Line Chart #flotLine5
         var newCust = [
             [0, 3],
             [1, 5],
@@ -180,7 +196,7 @@
                 show: false
             }
         });
-        // Line Chart  #flotLine5 End
+        // Line Chart #flotLine5 End
         // Traffic Chart using chartist
         if ($('#traffic-chart').length) {
             var chart = new Chartist.Line('#traffic-chart', {
@@ -263,7 +279,7 @@
                 }
             });
         }
-        //Traffic chart chart-js  End
+        //Traffic chart chart-js End
         // Bar Chart #flotBarChart
         $.plot("#flotBarChart", [{
             data: [

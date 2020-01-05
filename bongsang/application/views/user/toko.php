@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-6 m-4">
-            <img class="w-100" src="<?= base_url('Asset/img/');  ?>LogoAne.png" alt="Logo">
+        <div class="col-6 ml-5 pl-5">
+            <img style="width: 400px" src="<?= base_url('Asset/img/');  ?>LogoBongsang.png" alt="Logo">
         </div>
     </div>
     <div class="row justify-content-center">
@@ -15,9 +15,7 @@
             <img class="w-100" src="<?= base_url('Asset/img/');  ?>produk.jpg" alt="Logo">
         </div>
     </div>
-</div>
-<hr>
-<div class="container">
+    <hr style="border-top-width: 3px">
     <div class="row justify-content-center mb-4">
         <div class="col-8">
             <div id="slide" class="carousel slide" data-ride="carousel">
@@ -72,7 +70,7 @@
                             <div class="col-3">
                                 <div class="card mb-2" style="width: 14rem;">
                                     <form action="" method="get">
-                                        <a href="<?= base_url('user/produk'); ?>" style="text-decoration: none; color: black"><img src="<?= base_url('Asset/img/produk/') . $isi['gambar'] ?>" class="card-img" style="height: 222.5px; width: 222.5px;" alt=" ...">
+                                        <a href="<?= base_url('user/produk/') . $isi['id_barang']; ?>" style="text-decoration: none; color: black"><img src="<?= base_url('Asset/img/produk/') . $isi['gambar'] ?>" class="card-img" style="height: 222.5px; width: 222.5px;" alt=" ...">
                                             <div class="card-body">
                                                 <h5 class="card-title"><?= $isi['nama_barang'] . " " . $isi['sub_pilihan'] ?></h5>
                                                 <p class="card-text">

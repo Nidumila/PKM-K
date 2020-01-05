@@ -13,8 +13,8 @@
     <meta name="description" content="Keranjang Ane">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="<?= base_url('Asset/img/');  ?>icon.png">
-    <link rel="shortcut icon" href="<?= base_url('Asset/img/');  ?>icon.png">
+    <link rel="apple-touch-icon" href="<?= base_url('Asset/img/');  ?>LogoBongsang.png">
+    <link rel="shortcut icon" href="<?= base_url('Asset/img/');  ?>LogoBongsang.png">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="<?= base_url('Asset/');  ?>css/bootstrap.min.css">

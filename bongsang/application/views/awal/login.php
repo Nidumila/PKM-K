@@ -12,7 +12,7 @@
     <div class="row  justify-content-end">
         <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 col-xs-12" style="margin-top: 30px; ">
             <div class="column" style=" -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; padding: 3px; margin: 3px; background: white;">
-                <center><img src="<?= base_url('Asset/');  ?>img/LogoAne.png" alt="Keranjang Ane" width="300px" style="margin: 25px;"><br>
+                <center><img src="<?= base_url('Asset/img/');  ?>LogoBongsang.png" alt="Keranjang Ane" width="300px" style="margin: 25px;"><br>
                     <font size="5" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;"><b>Sign In</b></font>
                 </center>
                 <?= $this->session->flashdata('message'); ?>

@@ -18,26 +18,26 @@
                             </div>
                         </div>
                     </div>
-                        <div class="col-12">
-                            <div class="column kotak">
-                                <p><B>DETAIL PEMBELIAN</B></p>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <img class="pl-2" src="<?= base_url('Asset/img/'); ?>bongsang.jpg" alt="prodak" height="180px" style="">
-                                        </div>
-                                        <div class="col-2">
-                                            <center class="mb-3">
-                                                <font size="5">Rp.15.000,-</font>
-                                                <font size="2"> Jumlah 3</font>
-                                            </center>
-                                        </div>
+                    <div class="col-12 mt-2">
+                        <div class="column kotak">
+                            <p><B>DETAIL PEMBELIAN</B></p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img class="pl-2" src="<?= base_url('Asset/img/'); ?>bongsang.jpg" alt="prodak" height="180px" style="">
+                                    </div>
+                                    <div class="col-2">
+                                        <center class="mb-3">
+                                            <font size="5">Rp.15.000,-</font>
+                                            <font size="2"> Jumlah 3</font>
+                                        </center>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
         <div class="col-xl-4">
             <div class="container">

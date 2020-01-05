@@ -18,16 +18,6 @@ class User extends CI_Controller
         $this->load->view('user/toko', $data);
         $this->load->view('template/toko_footer');
         $id = $this->input->post('id_barang');
-        // $pilih = $this->db->get_where('produk', ['id_barang' => $id])->row_array();
-        // if ($member != null) {
-        //     $data = [
-        //         'id_barang' => $member['id_barang']
-        //     ];
-        //     $this->session->set_produkdata($data);
-        //     redirect('user/produk');
-        // }
-        // $this->session->set_produkdata($pilih);
-        // redirect('user/produk');
     }
 
     public function keranjang()
@@ -38,21 +28,19 @@ class User extends CI_Controller
         $this->load->view('template/toko_footer');
     }
 
-    public function produk()
+    public function produk($id)
     {
-        // if (!$this->session->produkdata('id_barang')) {
-        //     redirect('user/');
-        // }
+        $data['produk'] = $this->db->get_where('produk', ['id_barang' => $id])->row_array();
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
-        // $data['produk'] = $this->db->get_where('produk', ['id_barang' => $this->session->produkdata('id_barang')])->row_array();
         $this->load->view('template/toko_header', $data);
         $this->load->view('user/produk', $data);
         $this->load->view('user/descripsi', $data);
         $this->load->view('template/toko_footer');
     }
 
-    public function ulasan()
+    public function ulasan($id)
     {
+        $data['produk'] = $this->db->get_where('produk', ['id_barang' => $id])->row_array();
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
         $this->load->view('template/toko_header', $data);
         $this->load->view('user/produk', $data);
@@ -60,8 +48,9 @@ class User extends CI_Controller
         $this->load->view('template/toko_footer');
     }
 
-    public function diskusi()
+    public function diskusi($id)
     {
+        $data['produk'] = $this->db->get_where('produk', ['id_barang' => $id])->row_array();
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
         $this->load->view('template/toko_header', $data);
         $this->load->view('user/produk', $data);
@@ -85,7 +74,7 @@ class User extends CI_Controller
         $this->load->view('user/profile', $data);
         $this->load->view('template/toko_footer');
     }
-     public function halamanpembayaran()
+    public function halamanpembayaran()
     {
         $data['member'] = $this->db->get_where('member', ['email' => $this->session->userdata('email')])->row_array();
         $this->load->view('template/toko_header', $data);

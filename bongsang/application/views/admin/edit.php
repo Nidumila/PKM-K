@@ -14,12 +14,11 @@
                             <div class="form-grup">
                                 <div class="row">
                                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-8">
-                                        <label> Email</label>
+                                        <label for="staticEmail"> Email</label>
                                     </div>
                                     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-4">:</div>
                                     <div class="col-xl-7 col-lg-7 col-md-7 col-sm-6 col-12">
-                                        <input type="text" class="form-control" name="email" placeholder="Email Address" id="email" style="margin-top: 5px; margin-bottom; 5px;" value="<?= $admin['email']; ?>" readonly>
-                                        <?= form_error('email', '<small class="text-danger pl-1">', '</small>') ?>
+                                        <input type="text" name="email" readonly class="form-control-plaintext" id="staticEmail" value="<?= $admin['email']; ?>">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -38,11 +37,10 @@
                                     </div>
                                     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-4">:</div>
                                     <div class="col-xl-7 col-lg-7 col-md-7 col-sm-6 col-12">
-                                        <label><input type="radio" name="jenis_kelamin" value="L" <?php echo ($admin['jenis_kelamin'] == 'L') ? 'checked' : ''; ?>>
+                                        <label><input type="radio" name="jenis_kelamin" value="L" <?= ($admin['jenis_kelamin'] == 'L') ? 'checked' : ''; ?>>
                                             Laki-laki</label>
-                                        <label><input type="radio" name="jenis_kelamin" value="P" <?php echo ($admin['jenis_kelamin'] == 'P') ? 'checked' : ''; ?>>
+                                        <label><input type="radio" name="jenis_kelamin" value="P" <?= ($admin['jenis_kelamin'] == 'P') ? 'checked' : ''; ?>>
                                             Perempuan</label><br>
-                                        <?= form_error('jenis_kelamin', '<small class="text-danger pl-1">', '</small>') ?>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -52,7 +50,6 @@
                                     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-4">:</div>
                                     <div class="col-xl-7 col-lg-7 col-md-7 col-sm-6 col-12">
                                         <input type="text" class="form-control" name="alamat" placeholder="Alamat Lengkap" id="alamat" style="margin-top: 5px; margin-bottom; 5px;" value="<?= $admin['alamat']; ?>">
-                                        <?= form_error('alamat', '<small class="text-danger pl-1">', '</small>') ?>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -62,7 +59,6 @@
                                     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-4">:</div>
                                     <div class="col-xl-7 col-lg-7 col-md-7 col-sm-6 col-12">
                                         <input type="tel" class="form-control" name="ponsel" placeholder="Nomor Ponsel" id="ponsel" style="margin-top: 5px; margin-bottom; 5px;" value="<?= $admin['nomor_ponsel']; ?>">
-                                        <?= form_error('ponsel', '<small class="text-danger pl-1">', '</small>') ?>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -73,12 +69,12 @@
                                     <div class="col-xl-7 col-lg-7 col-md-7 col-sm-6 col-12">
                                         <div class="row" style="margin-top: 5px; margin-bottom; 5px;">
                                             <div class="col-3">
-                                                <img src="<?= base_url('Asset/img/profile/') . $admin['gambar']; ?>" id="blah" class="img-tumbinail">
+                                                <img id="prev_foto" src="<?= base_url('Asset/img/profile/') . $admin['gambar']; ?>" class="img-responsive img-thumbnail">
                                             </div>
                                             <div class="col-9">
                                                 <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="img" name="img">
-                                                    <label for="img" class="custom-file-label">Choose file</label>
+                                                    <input type="file" class="custom-file-input" id="image" name="image">
+                                                    <label for="image" class="custom-file-label">Choose file</label>
                                                 </div>
                                             </div>
                                         </div>

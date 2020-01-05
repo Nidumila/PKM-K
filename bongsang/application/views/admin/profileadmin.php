@@ -16,6 +16,7 @@
                             <div class="col-md-12">
                                 <div class="card-body">
                                     <h5 class="card-title">Admin</h5>
+                                    <?= $this->session->flashdata('message'); ?>
                                     <hr>
                                     <div class="row">
                                         <div class="col-4">
