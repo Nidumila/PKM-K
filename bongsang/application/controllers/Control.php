@@ -450,7 +450,7 @@ class Control extends CI_Controller
     public function berhasil()
     {
         $data['admin'] = $this->db->get_where('admin', ['email' => $this->session->userdata('email')])->row_array();
-        $data['transaksi'] = $this->db->get_where('transaksi', ['valid' == 1])->result_array();
+        $data['transaksi'] = $this->db->get_where('transaksi', ['valid' => 1])->result_array();
         $this->load->view('template/head');
         $this->load->view('template/sidebar', $data);
         $this->load->view('template/header', $data);

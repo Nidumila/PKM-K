@@ -21,7 +21,7 @@
                                     <div class="stat-text">Rp
                                         <span class="count">
                                             <?php
-                                            $total = "SELECT SUM(`total_bayar`) AS `total` FROM `transaksi`";
+                                            $total = "SELECT SUM(`total_bayar`) AS `total` FROM `transaksi` WHERE `valid`=1";
                                             $memjum = $this->db->query($total)->row_array();
                                             echo $memjum['total'];
                                             ?>

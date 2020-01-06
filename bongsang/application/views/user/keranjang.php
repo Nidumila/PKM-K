@@ -6,6 +6,7 @@
                 <a href="" type="reset" style="float: right; margin-right: 5px;">Hapus Semua</a>
             </div>
             <?php
+            error_reporting(0);
             $transaksi = file_get_contents('Asset/keranjang/keranjang' . $member['id_member'] . '.json');
             $list = json_decode($transaksi, true);
             $json = json_encode($list, JSON_PRETTY_PRINT);
@@ -16,7 +17,7 @@
             foreach ($list as $data) {
                 $id = $data['id'];
                 $query = $this->db->query("SELECT * FROM `produk` WHERE `id_barang`='$id'")->row_array();
-                $total = $data['Jumlah'] * $query['harga'];
+                $total = $data['Jumlah'] * $query['harga'] + $total;
 
             ?>
                 <div class="column mt-1 kotak">
@@ -27,7 +28,7 @@
                             <div class="col-4">
                                 <img class="pl-2" src="<?= base_url('Asset/img/') . $query['gambar']; ?>" alt="prodak" width="100%" style="">
                             </div>
-                            <div class="col-5">
+                            <div class="col-5" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
                                 <?= $query['deskripsi']; ?>
                             </div>
                             <div class="col-3">
@@ -35,6 +36,7 @@
                                     <font size="5">Rp<?= $query['harga']; ?>,-</font>
                                 </center>
                                 <center class="mb-3">
+                                    <font size="3">Jumlah :</font>
                                     <div class="container kotak" style="border: none">
                                         <div class="row justify-content-center">
                                             <div class="col-2 kotak" style="border: none">
@@ -50,15 +52,15 @@
                                     </div>
                                 </center>
                                 <script>
-                                    var no = 1;
+                                    var no<?= $i; ?> = 1;
                                     $(document).ready(function() {
                                         $('#tambah<?= $i; ?>').click(function() {
-                                            no++;
-                                            $('#hasil<?= $i; ?>').val(no);
+                                            no<?= $i; ?>++;
+                                            $('#hasil<?= $i; ?>').val(no<?= $i; ?>);
                                         });
                                         $('#kurang<?= $i; ?>').click(function() {
-                                            no--;
-                                            $('#hasil<?= $i; ?>').val(no);
+                                            no<?= $i; ?>--;
+                                            $('#hasil<?= $i; ?>').val(no<?= $i; ?>);
                                         });
                                     });
                                 </script>
@@ -111,12 +113,12 @@
                             <tr>
                                 <td>Subtotal</td>
                                 <td> : </td>
-                                <td> RP. - </td>
+                                <td>Rp<?= $total; ?></td>
                             </tr>
                             <tr>
                                 <td>Biaya Pengiriman</td>
                                 <td> : </td>
-                                <td> RP. - </td>
+                                <td> Rp. - </td>
                             </tr>
                             <br>
                             <tr>
@@ -131,32 +133,12 @@
                             <tr>
                                 <td>Total Harga</td>
                                 <td>:</td>
-                                <td>RP. - </td>
+                                <td>Rp<?= $total + $pengiriman; ?></td>
                             </tr>
                             <tr>
                                 <td colspan="3" class="text-center">
                                     <div class="container">
-                                        <?php
-                                        if (isset($_GET['pesan'])) {
-                                            if ($_GET['pesan'] == "salah") {
-                                                echo "<p>Captcha tidak sesuai.</p>";
-                                            }
-                                        }
-                                        ?>
-
-                                        <!-- <p>Isi Captcha Dengan Benar</p>     
-                                    <form action="captcha.php" method="post">
-                                        <table align="center">                      
-                                            <tr>
-                                                <td>Captcha</td>                
-                                                <td><img src="<?= base_url('user/capcha/') ?>" alt="gambar" /> </td>
-                                            </tr>
-                                            <td>Isikan captcha </td>
-                                            <td><input name="nilaiCaptcha" value=""/></td>
-                                        </table>
-                                    </form> -->
-                                        <a href="<?= base_url('user/halamanpembayaran') ?>"><button type="submit" class="btn btn-warning" name="bayar" style="margin-top: 5px;">Lanjut Membayar</button></a>
-
+                                        <a href="<?= base_url('user/halamanpemesanan') ?>"><button type="submit" class="btn btn-warning" name="bayar" style="margin-top: 5px;">Lanjut Membayar</button></a>
                                     </div>
                                 </td>
                             </tr>

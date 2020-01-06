@@ -101,8 +101,8 @@
                     </button>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="<?= base_url('user/profile'); ?>">Profil Saya</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="<?= base_url('user/pesan'); ?>">Pesanan Saya</a>
+                        <a class="dropdown-item" href="<?= base_url('user/riwayat'); ?>">Riwayat Transaksi</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?= base_url('awal/logout'); ?>">Logout</a>
                     </div>
