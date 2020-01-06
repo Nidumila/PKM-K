@@ -42,12 +42,17 @@
                                                 <td> <span class="tel"><?= $isi['nomor_ponsel']; ?></span></td>
                                                 <td> <span class="email"><?= $isi['email']; ?></span></td>
                                                 <td> <span class="address"><?= $isi['alamat']; ?></span></td>
-                                                <td> <span class="val"><?php
+                                                <td> <span class="val <?php
                                                                         if ($isi['admin_validasi'] == 1) {
-                                                                            echo "Tervalidasi";
+                                                                            echo "badge badge-complete";
                                                                         } else {
-                                                                            echo "Tidak Divalidasi";
-                                                                        }; ?></span></td>
+                                                                            echo "badge badge-pending";
+                                                                        }; ?>"><?php
+                                                                                if ($isi['admin_validasi'] == 1) {
+                                                                                    echo "Tervalidasi";
+                                                                                } else {
+                                                                                    echo "Tidak Divalidasi";
+                                                                                }; ?></span></td>
                                                 <td>
                                                     <span class="validation">
                                                         <a href="<?= base_url('control/edvalid/') . $isi['id_admin']; ?>">edit</a>

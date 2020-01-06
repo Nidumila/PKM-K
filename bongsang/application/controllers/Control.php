@@ -3,6 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Control extends CI_Controller
 {
+    //Control Untuk Admin
     public function __construct()
     {
         parent::__construct();
@@ -14,6 +15,7 @@ class Control extends CI_Controller
     public function index()
     {
         $data['admin'] = $this->db->get_where('admin', ['email' => $this->session->userdata('email')])->row_array();
+        $data['transaksi'] = $this->db->get('transaksi')->result_array();
         $this->load->view('template/head');
         $this->load->view('template/sidebar', $data);
         $this->load->view('template/header', $data);
@@ -205,6 +207,7 @@ class Control extends CI_Controller
         }
     }
 
+    //Control untuk member
     public function memberlist()
     {
         $data['admin'] = $this->db->get_where('admin', ['email' => $this->session->userdata('email')])->row_array();
@@ -234,6 +237,7 @@ class Control extends CI_Controller
         $this->load->view('template/footer');
     }
 
+    //Control untuk produk
     public function tambahproduk()
     {
         $data['admin'] = $this->db->get_where('admin', ['email' => $this->session->userdata('email')])->row_array();
@@ -407,6 +411,66 @@ class Control extends CI_Controller
         redirect('control/produklist');
     }
 
+    // Control untuk transaksi
+    public function traval($id)
+    {
+        $where = array('id_admin' => $id);
+        $data['admin'] = $this->db->get_where('admin', ['email' => $this->session->userdata('email')])->row_array();
+        $data['transaksi'] = $this->db->get_where('transaksi', ['id_transaksi' => $id])->row_array();
+        $this->form_validation->set_rules('id', 'Id Pesanan', 'required|trim');
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('template/head');
+            $this->load->view('template/sidebar', $data);
+            $this->load->view('template/header', $data);
+            $this->load->view('admin/traval', $data);
+            $this->load->view('template/footer');
+        } else {
+            $email = $this->input->post('id');
+            $valid = $this->input->post('valid');
+
+            $this->db->set('valid', $valid);
+            $this->db->where('id_transaksi', $email);
+            $this->db->update('transaksi');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" style="margin-top: 10px; margin-left: 25px; margin-right: 25px; text-align: center;" role="alert">Selamat! Transaksi Berhasil Dirubah </div>');
+            redirect('control/');
+        }
+    }
+
+    public function tralet($id)
+    {
+        $valid = 2;
+        $this->db->set('valid', $valid);
+        $this->db->where('id_transaksi', $id);
+        $this->db->update('transaksi');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" style="margin-top: 10px; margin-left: 25px; margin-right: 25px; text-align: center;" role="alert">Selamat! Transaksi Berhasil Digagalkan </div>');
+        redirect('control/');
+    }
+
+    public function berhasil()
+    {
+        $data['admin'] = $this->db->get_where('admin', ['email' => $this->session->userdata('email')])->row_array();
+        $data['transaksi'] = $this->db->get_where('transaksi', ['valid' == 1])->result_array();
+        $this->load->view('template/head');
+        $this->load->view('template/sidebar', $data);
+        $this->load->view('template/header', $data);
+        $this->load->view('admin/trasil');
+        $this->load->view('template/footer');
+    }
+
+    public function tradet($id)
+    {
+        $data['admin'] = $this->db->get_where('admin', ['email' => $this->session->userdata('email')])->row_array();
+        $data['detail'] = $this->db->get_where('transaksi', ['id_transaksi' => $id])->row_array();
+        $data['transaksi'] = $this->db->get_where('transaksi_detail', ['id_transaksi' => $id])->result_array();
+        $this->load->view('template/head');
+        $this->load->view('template/sidebar', $data);
+        $this->load->view('template/header', $data);
+        $this->load->view('admin/tratail', $data);
+        $this->load->view('template/footer');
+    }
+
+    //keluar
     public function logout()
     {
         $this->session->unset_userdata('email');

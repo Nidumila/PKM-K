@@ -39,12 +39,17 @@
                                                 <td> <span class="name"><?= $isi['nama_member']; ?></span></td>
                                                 <td> <span class="email"><?= $isi['email']; ?></span></td>
                                                 <td> <span class="date"><?= $isi['tanggal_daftar']; ?></span></td>
-                                                <td> <span class="validation"><?php
+                                                <td> <span class="validation <?php
                                                                                 if ($isi['member_validasi'] == 1) {
-                                                                                    echo "Tervalidasi";
+                                                                                    echo "badge badge-complete";
                                                                                 } else {
-                                                                                    echo "Tidak Divalidasi";
-                                                                                }; ?></span></td>
+                                                                                    echo "badge badge-pending";
+                                                                                }; ?>"><?php
+                                                                                        if ($isi['member_validasi'] == 1) {
+                                                                                            echo "Tervalidasi";
+                                                                                        } else {
+                                                                                            echo "Tidak Divalidasi";
+                                                                                        }; ?></span></td>
                                                 <td>
                                                     <span class="validation">
                                                         <a href="<?= base_url('control/memval/') . $isi['id_member']; ?>">edit</a>
