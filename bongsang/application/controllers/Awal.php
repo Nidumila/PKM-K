@@ -74,11 +74,11 @@ class Awal extends CI_Controller
             $date = date("Ymd");
             $jk = $this->input->post('jenis_kelamin');
             if (strlen($tambah) == 1) {
-                $format = "M" . $jk . $date . "00" . $tambah;
+                $format = "CO" . $date . "00" . $tambah;
             } else if (strlen($tambah) == 2) {
-                $format = "M" . $jk . $date . "0" . $tambah;
+                $format = "CO" . $date . "0" . $tambah;
             } else if (strlen($tambah) == 3) {
-                $format = "M" . $jk . $date . $tambah;
+                $format = "CO" . $date . $tambah;
             }
             $data = [
                 'id_member' => $format,
